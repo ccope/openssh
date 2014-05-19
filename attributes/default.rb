@@ -28,6 +28,8 @@ default['openssh']['package_name'] = case node['platform_family']
                                        %w[openssh]
                                      when 'freebsd'
                                        %w[]
+                                     when 'solaris2'
+                                       %w[ssh]
                                      else
                                        %w[openssh-client openssh-server]
                                      end
